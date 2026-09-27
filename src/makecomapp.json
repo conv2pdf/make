@@ -283,12 +283,82 @@
     "origins": [
         {
             "label": "Make",
-            "baseUrl": "https://eu2.make.com/api",
-            "appId": "conv2pdf",
+            "baseUrl": "https://eu1.make.com/api",
+            "appId": "conv2pdf-zcmy9m",
             "appVersion": 1,
             "idMapping": {
-                "connection": [],
-                "module": [],
+                "connection": [
+                    {
+                        "local": "conv2pdf",
+                        "remote": "conv2pdf-zcmy9m"
+                    }
+                ],
+                "module": [
+                    {
+                        "local": "convertDocumentToPdf",
+                        "remote": "convertDocumentToPdf"
+                    },
+                    {
+                        "local": "convertImageToPdf",
+                        "remote": "convertImageToPdf"
+                    },
+                    {
+                        "local": "convertHeicToPdf",
+                        "remote": "convertHeicToPdf"
+                    },
+                    {
+                        "local": "convertHeicToJpg",
+                        "remote": "convertHeicToJpg"
+                    },
+                    {
+                        "local": "convertPdfToWord",
+                        "remote": "convertPdfToWord"
+                    },
+                    {
+                        "local": "convertPdfToImages",
+                        "remote": "convertPdfToImages"
+                    },
+                    {
+                        "local": "mergePdfs",
+                        "remote": "mergePdfs"
+                    },
+                    {
+                        "local": "extractPdfPages",
+                        "remote": "extractPdfPages"
+                    },
+                    {
+                        "local": "rotatePdf",
+                        "remote": "rotatePdf"
+                    },
+                    {
+                        "local": "addPageNumbers",
+                        "remote": "addPageNumbers"
+                    },
+                    {
+                        "local": "addWatermark",
+                        "remote": "addWatermark"
+                    },
+                    {
+                        "local": "compressPdf",
+                        "remote": "compressPdf"
+                    },
+                    {
+                        "local": "protectPdf",
+                        "remote": "protectPdf"
+                    },
+                    {
+                        "local": "unlockPdf",
+                        "remote": "unlockPdf"
+                    },
+                    {
+                        "local": "getQuota",
+                        "remote": "getQuota"
+                    },
+                    {
+                        "local": "makeApiCall",
+                        "remote": "makeApiCall"
+                    }
+                ],
                 "function": [],
                 "rpc": [],
                 "webhook": []
