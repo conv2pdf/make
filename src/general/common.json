@@ -9,7 +9,6 @@
         "rate_limited": "conv2pdf accepts 20 conversions per minute per API key.",
         "server_busy": "The conv2pdf conversion queue is full.",
         "file_too_large": "The file is larger than your conv2pdf plan allows: 10 MB per file on the Dev plan, 200 MB on paid plans. Plans: https://conv2pdf.com/en/api/pricing/",
-        "total_too_large": "The files together are larger than your conv2pdf plan allows. Plans: https://conv2pdf.com/en/api/pricing/",
         "plan_limit_files": "Your conv2pdf plan does not merge that many files at once: 2 on the Dev plan, up to 20 on paid plans. Plans: https://conv2pdf.com/en/api/pricing/",
         "not_enough_files": "Merging needs at least 2 PDFs.",
         "too_many_files": "conv2pdf merges up to 20 PDFs at a time.",
@@ -35,6 +34,13 @@
         "file_expired": "The converted file is no longer available on conv2pdf.",
         "job_deleted": "The conversion was deleted on conv2pdf before it could be downloaded.",
         "job_not_found": "conv2pdf does not know this conversion.",
-        "tool_not_found": "conv2pdf does not have this tool."
+        "tool_not_found": "conv2pdf does not have this tool.",
+        "payload_too_large": "The request is larger than conv2pdf accepts: 220 MB for the files and fields together.",
+        "too_many_parts": "The request has too many parts: conv2pdf accepts 20 files and 10 fields at most.",
+        "field_required": "A required field is empty, such as the pages to extract or the watermark text.",
+        "invalid_rotation": "The rotation is not one conv2pdf accepts: 90, 180 or 270.",
+        "invalid_quality": "The quality is not one conv2pdf accepts: low, medium or high.",
+        "invalid_format": "The format is not one conv2pdf accepts for this module.",
+        "unsupported_format": "conv2pdf cannot read this image format. Use a PNG, JPG, WebP, GIF or TIFF image."
     }
 }

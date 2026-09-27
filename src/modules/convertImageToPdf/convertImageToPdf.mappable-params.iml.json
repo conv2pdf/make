@@ -5,7 +5,7 @@
         "label": "File name",
         "required": true,
         "semantic": "file:name",
-        "help": "Name of the file, with its extension. For example, `report.docx`."
+        "help": "Name of the file, with its extension. For example, `photo.jpg`."
     },
     {
         "name": "data",

@@ -21,7 +21,8 @@
                         "type": "filename",
                         "label": "File name",
                         "required": true,
-                        "semantic": "file:name"
+                        "semantic": "file:name",
+                        "help": "Name of the PDF, with its extension. For example, `part-1.pdf`."
                     }
                 ]
             },

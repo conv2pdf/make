@@ -28,7 +28,7 @@
                 "*": "automatic"
             },
             "output": {
-                "fileName": "{{decodeURL(get(split(headers.`content-disposition`, \"UTF-8''\"), 2))}}",
+                "fileName": "{{ifempty(decodeURL(ifempty(get(split(ifempty(headers.`content-disposition`, ''), \"UTF-8''\"), 2), '')), ifempty(get(split(ifempty(headers.`content-disposition`, ''), '\"'), 2), 'conv2pdf-' + temp.jobId))}}",
                 "data": "{{body}}",
                 "size_bytes": "{{temp.sizeBytes}}",
                 "job_id": "{{temp.jobId}}",
