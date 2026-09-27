@@ -1,0 +1,18 @@
+{
+    "url": "https://api.conv2pdf.com/v1/quota",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer {{parameters.apiKey}}",
+        "User-Agent": "make-conv2pdf/1.0"
+    },
+    "response": {
+        "error": {
+            "message": "[{{statusCode}}] {{if(body.error == 'invalid_api_key', 'The conv2pdf API key is invalid or has been revoked.', if(body.error == 'account_not_provisioned', 'This API key has no conv2pdf API plan.', 'conv2pdf rejected the API key.'))}}{{if(body.error, ' (error code: ' + body.error + ')', '')}}"
+        }
+    },
+    "log": {
+        "sanitize": [
+            "request.headers.authorization"
+        ]
+    }
+}

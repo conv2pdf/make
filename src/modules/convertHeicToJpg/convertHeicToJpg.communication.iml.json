@@ -1,0 +1,48 @@
+[
+    {
+        "url": "/convert/heic-to-jpg",
+        "method": "POST",
+        "type": "multipart/form-data",
+        "body": {
+            "file": {
+                "value": "{{parameters.data}}",
+                "options": {
+                    "filename": "{{parameters.fileName}}"
+                }
+            }
+        },
+        "response": {
+            "temp": {
+                "jobId": "{{body.job_id}}",
+                "sizeBytes": "{{body.size_bytes}}",
+                "quota": "{{body.quota}}"
+            }
+        }
+    },
+    {
+        "url": "/download/{{temp.jobId}}",
+        "method": "GET",
+        "response": {
+            "type": {
+                "200": "binary",
+                "*": "automatic"
+            },
+            "output": {
+                "fileName": "{{decodeURL(get(split(headers.`content-disposition`, \"UTF-8''\"), 2))}}",
+                "data": "{{body}}",
+                "size_bytes": "{{temp.sizeBytes}}",
+                "job_id": "{{temp.jobId}}",
+                "quota": {
+                    "plan": "{{temp.quota.plan}}",
+                    "quota": "{{temp.quota.quota}}",
+                    "used": "{{temp.quota.used}}",
+                    "soft_cap_limit": "{{temp.quota.soft_cap_limit}}",
+                    "status": "{{temp.quota.status}}",
+                    "period_end": "{{if(temp.quota.period_end, parseDate(temp.quota.period_end, 'x'), undefined)}}",
+                    "quota_period_end": "{{if(temp.quota.quota_period_end, parseDate(temp.quota.quota_period_end, 'x'), undefined)}}",
+                    "credits_expire_at": "{{if(temp.quota.credits_expire_at, parseDate(temp.quota.credits_expire_at, 'x'), undefined)}}"
+                }
+            }
+        }
+    }
+]

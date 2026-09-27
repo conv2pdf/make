@@ -1,0 +1,10 @@
+[
+    {
+        "name": "apiKey",
+        "type": "password",
+        "label": "API key",
+        "required": true,
+        "editable": true,
+        "help": "You can obtain your API key in the [Developer tab](https://conv2pdf.com/en/dashboard/#developer) of your conv2pdf dashboard. It starts with `cpdf_live_`, and conv2pdf shows it only once, when you create it."
+    }
+]

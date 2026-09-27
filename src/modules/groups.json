@@ -1,0 +1,43 @@
+[
+    {
+        "label": "Convert files",
+        "modules": [
+            "convertDocumentToPdf",
+            "convertImageToPdf",
+            "convertHeicToPdf",
+            "convertHeicToJpg",
+            "convertPdfToWord",
+            "convertPdfToImages"
+        ]
+    },
+    {
+        "label": "Edit PDFs",
+        "modules": [
+            "mergePdfs",
+            "extractPdfPages",
+            "rotatePdf",
+            "addPageNumbers",
+            "addWatermark",
+            "compressPdf"
+        ]
+    },
+    {
+        "label": "Secure PDFs",
+        "modules": [
+            "protectPdf",
+            "unlockPdf"
+        ]
+    },
+    {
+        "label": "Account",
+        "modules": [
+            "getQuota"
+        ]
+    },
+    {
+        "label": "Other",
+        "modules": [
+            "makeApiCall"
+        ]
+    }
+]

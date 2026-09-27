@@ -1,0 +1,71 @@
+[
+    {
+        "name": "fileName",
+        "type": "filename",
+        "label": "File name",
+        "semantic": "file:name"
+    },
+    {
+        "name": "data",
+        "type": "buffer",
+        "label": "Data",
+        "semantic": "file:data"
+    },
+    {
+        "name": "size_bytes",
+        "type": "uinteger",
+        "label": "Size (bytes)"
+    },
+    {
+        "name": "job_id",
+        "type": "text",
+        "label": "Job ID"
+    },
+    {
+        "name": "quota",
+        "type": "collection",
+        "label": "Quota",
+        "spec": [
+            {
+                "name": "plan",
+                "type": "text",
+                "label": "Plan"
+            },
+            {
+                "name": "quota",
+                "type": "uinteger",
+                "label": "Quota"
+            },
+            {
+                "name": "used",
+                "type": "uinteger",
+                "label": "Used"
+            },
+            {
+                "name": "soft_cap_limit",
+                "type": "uinteger",
+                "label": "Soft cap limit"
+            },
+            {
+                "name": "status",
+                "type": "text",
+                "label": "Status"
+            },
+            {
+                "name": "period_end",
+                "type": "date",
+                "label": "Billing period end"
+            },
+            {
+                "name": "quota_period_end",
+                "type": "date",
+                "label": "Quota reset date"
+            },
+            {
+                "name": "credits_expire_at",
+                "type": "date",
+                "label": "Trial credits expiry date"
+            }
+        ]
+    }
+]

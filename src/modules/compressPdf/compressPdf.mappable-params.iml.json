@@ -1,0 +1,40 @@
+[
+    {
+        "name": "fileName",
+        "type": "filename",
+        "label": "File name",
+        "required": true,
+        "semantic": "file:name",
+        "help": "Name of the file, with its extension. For example, `report.docx`."
+    },
+    {
+        "name": "data",
+        "type": "buffer",
+        "label": "Data",
+        "required": true,
+        "semantic": "file:data",
+        "help": "Content of the PDF to compress."
+    },
+    {
+        "name": "quality",
+        "type": "select",
+        "label": "Quality",
+        "required": true,
+        "default": "medium",
+        "help": "Resolution kept for the images inside the PDF. Low gives the smallest file.",
+        "options": [
+            {
+                "label": "Low (72 DPI)",
+                "value": "low"
+            },
+            {
+                "label": "Medium (150 DPI)",
+                "value": "medium"
+            },
+            {
+                "label": "High (300 DPI)",
+                "value": "high"
+            }
+        ]
+    }
+]

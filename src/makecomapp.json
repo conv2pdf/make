@@ -1,0 +1,299 @@
+{
+    "fileVersion": 1,
+    "generalCodeFiles": {
+        "base": "general/base.iml.json",
+        "common": "general/common.json",
+        "readme": "README.md",
+        "groups": "modules/groups.json"
+    },
+    "components": {
+        "connection": {
+            "conv2pdf": {
+                "label": "conv2pdf",
+                "connectionType": "basic",
+                "codeFiles": {
+                    "communication": "connections/conv2pdf/conv2pdf.communication.iml.json",
+                    "params": "connections/conv2pdf/conv2pdf.params.iml.json",
+                    "common": null
+                }
+            }
+        },
+        "module": {
+            "convertDocumentToPdf": {
+                "label": "Convert a document to PDF",
+                "description": "Converts a Word, Excel, PowerPoint or OpenDocument file to PDF.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/convertDocumentToPdf/convertDocumentToPdf.communication.iml.json",
+                    "staticParams": "modules/convertDocumentToPdf/convertDocumentToPdf.static-params.iml.json",
+                    "mappableParams": "modules/convertDocumentToPdf/convertDocumentToPdf.mappable-params.iml.json",
+                    "interface": "modules/convertDocumentToPdf/convertDocumentToPdf.interface.iml.json",
+                    "samples": "modules/convertDocumentToPdf/convertDocumentToPdf.samples.iml.json",
+                    "scope": "modules/convertDocumentToPdf/convertDocumentToPdf.scope.iml.json"
+                }
+            },
+            "convertImageToPdf": {
+                "label": "Convert an image to PDF",
+                "description": "Converts a PNG, JPG, WebP, GIF or TIFF image to PDF.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/convertImageToPdf/convertImageToPdf.communication.iml.json",
+                    "staticParams": "modules/convertImageToPdf/convertImageToPdf.static-params.iml.json",
+                    "mappableParams": "modules/convertImageToPdf/convertImageToPdf.mappable-params.iml.json",
+                    "interface": "modules/convertImageToPdf/convertImageToPdf.interface.iml.json",
+                    "samples": "modules/convertImageToPdf/convertImageToPdf.samples.iml.json",
+                    "scope": "modules/convertImageToPdf/convertImageToPdf.scope.iml.json"
+                }
+            },
+            "convertHeicToPdf": {
+                "label": "Convert a HEIC photo to PDF",
+                "description": "Converts an iPhone HEIC or HEIF photo to PDF.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/convertHeicToPdf/convertHeicToPdf.communication.iml.json",
+                    "staticParams": "modules/convertHeicToPdf/convertHeicToPdf.static-params.iml.json",
+                    "mappableParams": "modules/convertHeicToPdf/convertHeicToPdf.mappable-params.iml.json",
+                    "interface": "modules/convertHeicToPdf/convertHeicToPdf.interface.iml.json",
+                    "samples": "modules/convertHeicToPdf/convertHeicToPdf.samples.iml.json",
+                    "scope": "modules/convertHeicToPdf/convertHeicToPdf.scope.iml.json"
+                }
+            },
+            "convertHeicToJpg": {
+                "label": "Convert a HEIC photo to JPG",
+                "description": "Converts an iPhone HEIC or HEIF photo to JPG.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/convertHeicToJpg/convertHeicToJpg.communication.iml.json",
+                    "staticParams": "modules/convertHeicToJpg/convertHeicToJpg.static-params.iml.json",
+                    "mappableParams": "modules/convertHeicToJpg/convertHeicToJpg.mappable-params.iml.json",
+                    "interface": "modules/convertHeicToJpg/convertHeicToJpg.interface.iml.json",
+                    "samples": "modules/convertHeicToJpg/convertHeicToJpg.samples.iml.json",
+                    "scope": "modules/convertHeicToJpg/convertHeicToJpg.scope.iml.json"
+                }
+            },
+            "convertPdfToWord": {
+                "label": "Convert a PDF to Word",
+                "description": "Converts a PDF to an editable Word (DOCX) document. The PDF must contain text: scanned pages without text cannot be converted.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/convertPdfToWord/convertPdfToWord.communication.iml.json",
+                    "staticParams": "modules/convertPdfToWord/convertPdfToWord.static-params.iml.json",
+                    "mappableParams": "modules/convertPdfToWord/convertPdfToWord.mappable-params.iml.json",
+                    "interface": "modules/convertPdfToWord/convertPdfToWord.interface.iml.json",
+                    "samples": "modules/convertPdfToWord/convertPdfToWord.samples.iml.json",
+                    "scope": "modules/convertPdfToWord/convertPdfToWord.scope.iml.json"
+                }
+            },
+            "convertPdfToImages": {
+                "label": "Convert a PDF to images",
+                "description": "Turns each page of a PDF into a PNG or JPG image and returns the images in a ZIP file.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/convertPdfToImages/convertPdfToImages.communication.iml.json",
+                    "staticParams": "modules/convertPdfToImages/convertPdfToImages.static-params.iml.json",
+                    "mappableParams": "modules/convertPdfToImages/convertPdfToImages.mappable-params.iml.json",
+                    "interface": "modules/convertPdfToImages/convertPdfToImages.interface.iml.json",
+                    "samples": "modules/convertPdfToImages/convertPdfToImages.samples.iml.json",
+                    "scope": "modules/convertPdfToImages/convertPdfToImages.scope.iml.json"
+                }
+            },
+            "mergePdfs": {
+                "label": "Merge PDFs",
+                "description": "Combines several PDFs into one, in the order of the list. The Dev plan merges 2 PDFs at a time, paid plans up to 20.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/mergePdfs/mergePdfs.communication.iml.json",
+                    "staticParams": "modules/mergePdfs/mergePdfs.static-params.iml.json",
+                    "mappableParams": "modules/mergePdfs/mergePdfs.mappable-params.iml.json",
+                    "interface": "modules/mergePdfs/mergePdfs.interface.iml.json",
+                    "samples": "modules/mergePdfs/mergePdfs.samples.iml.json",
+                    "scope": "modules/mergePdfs/mergePdfs.scope.iml.json"
+                }
+            },
+            "extractPdfPages": {
+                "label": "Extract pages from a PDF",
+                "description": "Creates a new PDF with the pages you choose.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/extractPdfPages/extractPdfPages.communication.iml.json",
+                    "staticParams": "modules/extractPdfPages/extractPdfPages.static-params.iml.json",
+                    "mappableParams": "modules/extractPdfPages/extractPdfPages.mappable-params.iml.json",
+                    "interface": "modules/extractPdfPages/extractPdfPages.interface.iml.json",
+                    "samples": "modules/extractPdfPages/extractPdfPages.samples.iml.json",
+                    "scope": "modules/extractPdfPages/extractPdfPages.scope.iml.json"
+                }
+            },
+            "rotatePdf": {
+                "label": "Rotate a PDF",
+                "description": "Rotates every page of a PDF.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/rotatePdf/rotatePdf.communication.iml.json",
+                    "staticParams": "modules/rotatePdf/rotatePdf.static-params.iml.json",
+                    "mappableParams": "modules/rotatePdf/rotatePdf.mappable-params.iml.json",
+                    "interface": "modules/rotatePdf/rotatePdf.interface.iml.json",
+                    "samples": "modules/rotatePdf/rotatePdf.samples.iml.json",
+                    "scope": "modules/rotatePdf/rotatePdf.scope.iml.json"
+                }
+            },
+            "addPageNumbers": {
+                "label": "Add page numbers to a PDF",
+                "description": "Numbers the pages of a PDF.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/addPageNumbers/addPageNumbers.communication.iml.json",
+                    "staticParams": "modules/addPageNumbers/addPageNumbers.static-params.iml.json",
+                    "mappableParams": "modules/addPageNumbers/addPageNumbers.mappable-params.iml.json",
+                    "interface": "modules/addPageNumbers/addPageNumbers.interface.iml.json",
+                    "samples": "modules/addPageNumbers/addPageNumbers.samples.iml.json",
+                    "scope": "modules/addPageNumbers/addPageNumbers.scope.iml.json"
+                }
+            },
+            "addWatermark": {
+                "label": "Add a watermark to a PDF",
+                "description": "Stamps a text watermark on every page of a PDF.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/addWatermark/addWatermark.communication.iml.json",
+                    "staticParams": "modules/addWatermark/addWatermark.static-params.iml.json",
+                    "mappableParams": "modules/addWatermark/addWatermark.mappable-params.iml.json",
+                    "interface": "modules/addWatermark/addWatermark.interface.iml.json",
+                    "samples": "modules/addWatermark/addWatermark.samples.iml.json",
+                    "scope": "modules/addWatermark/addWatermark.scope.iml.json"
+                }
+            },
+            "compressPdf": {
+                "label": "Compress a PDF",
+                "description": "Reduces the size of a PDF by resampling its images.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/compressPdf/compressPdf.communication.iml.json",
+                    "staticParams": "modules/compressPdf/compressPdf.static-params.iml.json",
+                    "mappableParams": "modules/compressPdf/compressPdf.mappable-params.iml.json",
+                    "interface": "modules/compressPdf/compressPdf.interface.iml.json",
+                    "samples": "modules/compressPdf/compressPdf.samples.iml.json",
+                    "scope": "modules/compressPdf/compressPdf.scope.iml.json"
+                }
+            },
+            "protectPdf": {
+                "label": "Protect a PDF with a password",
+                "description": "Encrypts a PDF with a password, and can prevent printing or copying its text.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/protectPdf/protectPdf.communication.iml.json",
+                    "staticParams": "modules/protectPdf/protectPdf.static-params.iml.json",
+                    "mappableParams": "modules/protectPdf/protectPdf.mappable-params.iml.json",
+                    "interface": "modules/protectPdf/protectPdf.interface.iml.json",
+                    "samples": "modules/protectPdf/protectPdf.samples.iml.json",
+                    "scope": "modules/protectPdf/protectPdf.scope.iml.json"
+                }
+            },
+            "unlockPdf": {
+                "label": "Remove a password from a PDF",
+                "description": "Removes the password from a PDF when you know it.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/unlockPdf/unlockPdf.communication.iml.json",
+                    "staticParams": "modules/unlockPdf/unlockPdf.static-params.iml.json",
+                    "mappableParams": "modules/unlockPdf/unlockPdf.mappable-params.iml.json",
+                    "interface": "modules/unlockPdf/unlockPdf.interface.iml.json",
+                    "samples": "modules/unlockPdf/unlockPdf.samples.iml.json",
+                    "scope": "modules/unlockPdf/unlockPdf.scope.iml.json"
+                }
+            },
+            "getQuota": {
+                "label": "Get quota",
+                "description": "Returns the plan, the conversions used and the limits of the API key. Uses no conversion.",
+                "moduleType": "action",
+                "actionCrud": "read",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/getQuota/getQuota.communication.iml.json",
+                    "staticParams": "modules/getQuota/getQuota.static-params.iml.json",
+                    "mappableParams": "modules/getQuota/getQuota.mappable-params.iml.json",
+                    "interface": "modules/getQuota/getQuota.interface.iml.json",
+                    "samples": "modules/getQuota/getQuota.samples.iml.json",
+                    "scope": "modules/getQuota/getQuota.scope.iml.json"
+                }
+            },
+            "makeApiCall": {
+                "label": "Make an API call",
+                "description": "Sends a custom API call to conv2pdf. You can use this to call endpoints that aren't covered by existing modules.",
+                "moduleType": "universal",
+                "actionCrud": null,
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/makeApiCall/makeApiCall.communication.iml.json",
+                    "staticParams": "modules/makeApiCall/makeApiCall.static-params.iml.json",
+                    "mappableParams": "modules/makeApiCall/makeApiCall.mappable-params.iml.json",
+                    "interface": "modules/makeApiCall/makeApiCall.interface.iml.json",
+                    "samples": "modules/makeApiCall/makeApiCall.samples.iml.json",
+                    "scope": "modules/makeApiCall/makeApiCall.scope.iml.json"
+                }
+            }
+        },
+        "function": {},
+        "rpc": {},
+        "webhook": {}
+    },
+    "origins": [
+        {
+            "label": "Make",
+            "baseUrl": "https://eu2.make.com/api",
+            "appId": "conv2pdf",
+            "appVersion": 1,
+            "idMapping": {
+                "connection": [],
+                "module": [],
+                "function": [],
+                "rpc": [],
+                "webhook": []
+            },
+            "apikeyFile": "../.secrets/apikey"
+        }
+    ]
+}

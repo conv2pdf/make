@@ -1,0 +1,41 @@
+[
+    {
+        "name": "fileName",
+        "type": "filename",
+        "label": "File name",
+        "required": true,
+        "semantic": "file:name",
+        "help": "Name of the file, with its extension. For example, `report.docx`."
+    },
+    {
+        "name": "data",
+        "type": "buffer",
+        "label": "Data",
+        "required": true,
+        "semantic": "file:data",
+        "help": "Content of the PDF to protect."
+    },
+    {
+        "name": "password",
+        "type": "text",
+        "label": "Password",
+        "required": true,
+        "help": "Password needed to open the PDF, from 4 to 64 characters.",
+        "validate": {
+            "min": 4,
+            "max": 64
+        }
+    },
+    {
+        "name": "preventPrint",
+        "type": "boolean",
+        "label": "Prevent printing",
+        "default": false
+    },
+    {
+        "name": "preventCopy",
+        "type": "boolean",
+        "label": "Prevent copying text",
+        "default": false
+    }
+]

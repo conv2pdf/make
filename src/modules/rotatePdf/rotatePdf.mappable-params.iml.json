@@ -1,0 +1,39 @@
+[
+    {
+        "name": "fileName",
+        "type": "filename",
+        "label": "File name",
+        "required": true,
+        "semantic": "file:name",
+        "help": "Name of the file, with its extension. For example, `report.docx`."
+    },
+    {
+        "name": "data",
+        "type": "buffer",
+        "label": "Data",
+        "required": true,
+        "semantic": "file:data",
+        "help": "Content of the PDF to rotate."
+    },
+    {
+        "name": "rotation",
+        "type": "select",
+        "label": "Rotation",
+        "required": true,
+        "default": "90",
+        "options": [
+            {
+                "label": "90° clockwise",
+                "value": "90"
+            },
+            {
+                "label": "180°",
+                "value": "180"
+            },
+            {
+                "label": "270° clockwise",
+                "value": "270"
+            }
+        ]
+    }
+]

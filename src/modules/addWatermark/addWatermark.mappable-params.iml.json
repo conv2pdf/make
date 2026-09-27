@@ -1,0 +1,28 @@
+[
+    {
+        "name": "fileName",
+        "type": "filename",
+        "label": "File name",
+        "required": true,
+        "semantic": "file:name",
+        "help": "Name of the file, with its extension. For example, `report.docx`."
+    },
+    {
+        "name": "data",
+        "type": "buffer",
+        "label": "Data",
+        "required": true,
+        "semantic": "file:data",
+        "help": "Content of the PDF to stamp."
+    },
+    {
+        "name": "text",
+        "type": "text",
+        "label": "Text",
+        "required": true,
+        "help": "Watermark text, up to 50 characters. For example, `CONFIDENTIAL`.",
+        "validate": {
+            "max": 50
+        }
+    }
+]

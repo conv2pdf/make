@@ -1,0 +1,25 @@
+[
+    {
+        "name": "fileName",
+        "type": "filename",
+        "label": "File name",
+        "required": true,
+        "semantic": "file:name",
+        "help": "Name of the file, with its extension. For example, `report.docx`."
+    },
+    {
+        "name": "data",
+        "type": "buffer",
+        "label": "Data",
+        "required": true,
+        "semantic": "file:data",
+        "help": "Content of the PDF to take the pages from."
+    },
+    {
+        "name": "ranges",
+        "type": "text",
+        "label": "Pages",
+        "required": true,
+        "help": "Pages to keep, as page numbers and ranges separated by commas. For example, `1-5,7,10-12`."
+    }
+]

@@ -1,0 +1,16 @@
+{
+    "url": "/quota",
+    "method": "GET",
+    "response": {
+        "output": {
+            "plan": "{{body.plan}}",
+            "quota": "{{body.quota}}",
+            "used": "{{body.used}}",
+            "soft_cap_limit": "{{body.soft_cap_limit}}",
+            "status": "{{body.status}}",
+            "period_end": "{{if(body.period_end, parseDate(body.period_end, 'x'), undefined)}}",
+            "quota_period_end": "{{if(body.quota_period_end, parseDate(body.quota_period_end, 'x'), undefined)}}",
+            "credits_expire_at": "{{if(body.credits_expire_at, parseDate(body.credits_expire_at, 'x'), undefined)}}"
+        }
+    }
+}

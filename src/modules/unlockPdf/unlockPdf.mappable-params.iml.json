@@ -1,0 +1,25 @@
+[
+    {
+        "name": "fileName",
+        "type": "filename",
+        "label": "File name",
+        "required": true,
+        "semantic": "file:name",
+        "help": "Name of the file, with its extension. For example, `report.docx`."
+    },
+    {
+        "name": "data",
+        "type": "buffer",
+        "label": "Data",
+        "required": true,
+        "semantic": "file:data",
+        "help": "Content of the protected PDF."
+    },
+    {
+        "name": "password",
+        "type": "text",
+        "label": "Password",
+        "required": true,
+        "help": "Current password of the PDF."
+    }
+]

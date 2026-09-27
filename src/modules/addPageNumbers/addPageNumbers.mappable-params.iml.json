@@ -1,0 +1,56 @@
+[
+    {
+        "name": "fileName",
+        "type": "filename",
+        "label": "File name",
+        "required": true,
+        "semantic": "file:name",
+        "help": "Name of the file, with its extension. For example, `report.docx`."
+    },
+    {
+        "name": "data",
+        "type": "buffer",
+        "label": "Data",
+        "required": true,
+        "semantic": "file:data",
+        "help": "Content of the PDF to number."
+    },
+    {
+        "name": "format",
+        "type": "select",
+        "label": "Format",
+        "required": true,
+        "default": "full",
+        "options": [
+            {
+                "label": "Page X of N",
+                "value": "full"
+            },
+            {
+                "label": "Page number only",
+                "value": "simple"
+            }
+        ]
+    },
+    {
+        "name": "position",
+        "type": "select",
+        "label": "Position",
+        "required": true,
+        "default": "bottom-center",
+        "options": [
+            {
+                "label": "Bottom center",
+                "value": "bottom-center"
+            },
+            {
+                "label": "Bottom left",
+                "value": "bottom-left"
+            },
+            {
+                "label": "Bottom right",
+                "value": "bottom-right"
+            }
+        ]
+    }
+]

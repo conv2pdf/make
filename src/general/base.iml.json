@@ -1,0 +1,27 @@
+{
+    "baseUrl": "https://api.conv2pdf.com/v1",
+    "headers": {
+        "Authorization": "Bearer {{connection.apiKey}}",
+        "User-Agent": "make-conv2pdf/1.0"
+    },
+    "timeout": "{{common.timeout}}",
+    "response": {
+        "error": {
+            "401": {
+                "type": "InvalidAccessTokenError",
+                "message": "[401] {{ifempty(get(common.errorMessages, body.error), 'conv2pdf refused the request.')}}{{if(body.error, ' (error code: ' + body.error + ')', '')}}"
+            },
+            "429": {
+                "type": "{{if(body.error == 'quota_exceeded', 'RuntimeError', 'RateLimitError')}}",
+                "message": "[429] {{ifempty(get(common.errorMessages, body.error), 'conv2pdf refused the request.')}}{{if(body.error, ' (error code: ' + body.error + ')', '')}}"
+            },
+            "type": "{{if(contains(',file_too_large,total_too_large,plan_limit_files,not_enough_files,too_many_files,unsupported_content,unsupported_media_type,empty_file,source_unreadable,password_protected,needs_password,wrong_password,password_too_short,password_too_long,pdf_already_protected,pdf_not_protected,pdf_scanned_needs_ocr,pdf_too_many_pages,too_many_pages,invalid_page_range,unsupported_characters,output_too_large,conversion_failed,conversion_timeout,', ',' + body.error + ','), 'DataError', if(statusCode >= 500, 'ConnectionError', 'RuntimeError'))}}",
+            "message": "[{{statusCode}}] {{ifempty(get(common.errorMessages, body.error), 'conv2pdf refused the request.')}}{{if(body.error, ' (error code: ' + body.error + ')', '')}}"
+        }
+    },
+    "log": {
+        "sanitize": [
+            "request.headers.authorization"
+        ]
+    }
+}

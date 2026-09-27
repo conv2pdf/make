@@ -1,0 +1,15 @@
+{
+    "fileName": "report.docx",
+    "size_bytes": 124533,
+    "job_id": "abc123def456",
+    "quota": {
+        "plan": "starter",
+        "quota": 1000,
+        "used": 42,
+        "soft_cap_limit": 1100,
+        "status": "ok",
+        "period_end": "2026-10-27T09:30:00.000Z",
+        "quota_period_end": "2026-10-27T09:30:00.000Z",
+        "credits_expire_at": null
+    }
+}
