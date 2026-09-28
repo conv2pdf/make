@@ -24,5 +24,12 @@
         "validate": {
             "max": 50
         }
+    },
+    {
+        "name": "password",
+        "type": "text",
+        "label": "PDF password",
+        "required": false,
+        "help": "Only for a PDF that asks for a password to open. The result has no password."
     }
 ]

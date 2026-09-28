@@ -20,9 +20,9 @@
         "type": "text",
         "label": "Password",
         "required": true,
-        "help": "Password needed to open the PDF, from 4 to 64 characters.",
+        "help": "Password needed to open the PDF, from 6 to 64 characters.",
         "validate": {
-            "min": 4,
+            "min": 6,
             "max": 64
         }
     },

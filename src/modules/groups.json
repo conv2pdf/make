@@ -6,6 +6,7 @@
             "convertImageToPdf",
             "convertHeicToPdf",
             "convertHeicToJpg",
+            "convertEpubToPdf",
             "convertPdfToWord",
             "convertPdfToImages"
         ]

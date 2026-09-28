@@ -15,13 +15,14 @@
                 "type": "{{if(body.error == 'quota_exceeded', 'RuntimeError', 'RateLimitError')}}",
                 "message": "[429] {{ifempty(get(common.errorMessages, body.error), 'conv2pdf refused the request.')}}{{if(body.error, ' (error code: ' + body.error + ')', '')}}"
             },
-            "type": "{{if(contains(',file_too_large,payload_too_large,too_many_parts,plan_limit_files,not_enough_files,too_many_files,field_required,invalid_rotation,invalid_quality,invalid_format,invalid_page_range,unsupported_content,unsupported_media_type,unsupported_format,empty_file,source_unreadable,password_protected,needs_password,wrong_password,password_too_short,password_too_long,pdf_already_protected,pdf_not_protected,pdf_scanned_needs_ocr,pdf_too_many_pages,too_many_pages,unsupported_characters,output_too_large,conversion_failed,conversion_timeout,', ',' + body.error + ','), 'DataError', if(statusCode >= 500, 'ConnectionError', 'RuntimeError'))}}",
-            "message": "[{{statusCode}}] {{ifempty(get(common.errorMessages, body.error), 'conv2pdf refused the request.')}}{{if(body.error, ' (error code: ' + body.error + ')', '')}}"
+            "type": "{{if(contains(',file_too_large,payload_too_large,too_many_parts,plan_limit_files,not_enough_files,too_many_files,field_required,invalid_rotation,invalid_quality,invalid_format,invalid_page_range,unsupported_content,unsupported_media_type,unsupported_format,empty_file,source_unreadable,password_protected,needs_password,wrong_password,password_too_short,password_too_long,pdf_already_protected,pdf_not_protected,pdf_scanned_needs_ocr,pdf_too_many_pages,too_many_pages,unsupported_characters,output_too_large,conversion_failed,conversion_timeout,epub_blank_output,epub_too_long,', ',' + body.error + ','), 'DataError', if(statusCode >= 500, 'ConnectionError', 'RuntimeError'))}}",
+            "message": "[{{statusCode}}] {{ifempty(get(common.contentHints, ifempty(body.detected_type, 'none')), ifempty(get(common.errorMessages, body.error), 'conv2pdf refused the request.'))}}{{if(body.error, ' (error code: ' + body.error + ')', '')}}"
         }
     },
     "log": {
         "sanitize": [
-            "request.headers.authorization"
+            "request.headers.authorization",
+            "request.body.password"
         ]
     }
 }

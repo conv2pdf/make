@@ -11,7 +11,8 @@
                 }
             },
             "format": "{{parameters.format}}",
-            "position": "{{parameters.position}}"
+            "position": "{{parameters.position}}",
+            "password": "{{parameters.password}}"
         },
         "response": {
             "temp": {

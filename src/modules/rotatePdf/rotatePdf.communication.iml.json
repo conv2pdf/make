@@ -10,7 +10,8 @@
                     "filename": "{{parameters.fileName}}"
                 }
             },
-            "rotation": "{{parameters.rotation}}"
+            "rotation": "{{parameters.rotation}}",
+            "password": "{{parameters.password}}"
         },
         "response": {
             "temp": {

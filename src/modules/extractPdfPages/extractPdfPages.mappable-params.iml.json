@@ -21,5 +21,12 @@
         "label": "Pages",
         "required": true,
         "help": "Pages to keep, as page numbers and ranges separated by commas. For example, `1-5,7,10-12`."
+    },
+    {
+        "name": "password",
+        "type": "text",
+        "label": "PDF password",
+        "required": false,
+        "help": "Only for a PDF that asks for a password to open. The result has no password."
     }
 ]

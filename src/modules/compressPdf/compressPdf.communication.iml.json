@@ -10,7 +10,8 @@
                     "filename": "{{parameters.fileName}}"
                 }
             },
-            "quality": "{{parameters.quality}}"
+            "quality": "{{parameters.quality}}",
+            "password": "{{parameters.password}}"
         },
         "response": {
             "temp": {

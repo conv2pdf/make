@@ -83,6 +83,22 @@
                     "scope": "modules/convertHeicToJpg/convertHeicToJpg.scope.iml.json"
                 }
             },
+            "convertEpubToPdf": {
+                "label": "Convert an e-book to PDF",
+                "description": "Converts an EPUB e-book to a PDF on A4 pages, with its table of contents and links.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "conv2pdf",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "modules/convertEpubToPdf/convertEpubToPdf.communication.iml.json",
+                    "staticParams": "modules/convertEpubToPdf/convertEpubToPdf.static-params.iml.json",
+                    "mappableParams": "modules/convertEpubToPdf/convertEpubToPdf.mappable-params.iml.json",
+                    "interface": "modules/convertEpubToPdf/convertEpubToPdf.interface.iml.json",
+                    "samples": "modules/convertEpubToPdf/convertEpubToPdf.samples.iml.json",
+                    "scope": "modules/convertEpubToPdf/convertEpubToPdf.scope.iml.json"
+                }
+            },
             "convertPdfToWord": {
                 "label": "Convert a PDF to Word",
                 "description": "Converts a PDF to an editable Word (DOCX) document. The PDF must contain text: scanned pages without text cannot be converted.",

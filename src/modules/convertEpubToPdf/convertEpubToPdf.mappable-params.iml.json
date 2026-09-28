@@ -1,0 +1,18 @@
+[
+    {
+        "name": "fileName",
+        "type": "filename",
+        "label": "File name",
+        "required": true,
+        "semantic": "file:name",
+        "help": "Name of the file, with its extension. For example, `book.epub`."
+    },
+    {
+        "name": "data",
+        "type": "buffer",
+        "label": "Data",
+        "required": true,
+        "semantic": "file:data",
+        "help": "Content of the EPUB e-book to convert, without DRM and up to 1,500 pages. The PDF uses standard fonts instead of the book's own. Books made of full-page images, such as comics and picture books, are refused when their pages would come out blank."
+    }
+]

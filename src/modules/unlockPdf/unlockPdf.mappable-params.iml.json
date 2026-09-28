@@ -19,7 +19,7 @@
         "name": "password",
         "type": "text",
         "label": "Password",
-        "required": true,
-        "help": "Current password of the PDF."
+        "required": false,
+        "help": "Current password of the PDF. Leave it empty for a PDF that opens without a password but restricts printing or copying."
     }
 ]

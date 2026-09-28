@@ -16,10 +16,10 @@
         "unsupported_media_type": "conv2pdf does not accept this type of file for this module.",
         "empty_file": "The file is empty.",
         "source_unreadable": "conv2pdf could not read this file.",
-        "password_protected": "The PDF is protected with a password. Remove it first with the Remove a password from a PDF module.",
-        "needs_password": "The PDF is protected with a password. Remove it first with the Remove a password from a PDF module.",
+        "password_protected": "The file is protected with a password. For a PDF, remove it first with the Remove a password from a PDF module. A DRM-protected e-book or a locked iWork document cannot be converted.",
+        "needs_password": "The PDF asks for a password to open. Fill in the PDF password field, or remove it first with the Remove a password from a PDF module.",
         "wrong_password": "The password of the PDF is wrong.",
-        "password_too_short": "The password must be at least 4 characters long.",
+        "password_too_short": "The password must be at least 6 characters long.",
         "password_too_long": "The password must be 64 characters or fewer.",
         "pdf_already_protected": "This PDF is already protected with a password.",
         "pdf_not_protected": "This PDF has no password to remove.",
@@ -41,6 +41,14 @@
         "invalid_rotation": "The rotation is not one conv2pdf accepts: 90, 180 or 270.",
         "invalid_quality": "The quality is not one conv2pdf accepts: low, medium or high.",
         "invalid_format": "The format is not one conv2pdf accepts for this module.",
-        "unsupported_format": "conv2pdf cannot read this image format. Use a PNG, JPG, WebP, GIF or TIFF image."
+        "unsupported_format": "conv2pdf cannot read this image format. Use a PNG, JPG, WebP, GIF or TIFF image.",
+        "epub_blank_output": "This e-book cannot be converted: its pages are full-screen images (comics, picture books, manga), and their layout does not survive the conversion to PDF.",
+        "epub_too_long": "The e-book is longer than the 1,500 pages conv2pdf converts at once."
+    },
+    "contentHints": {
+        "epub": "This file is an EPUB e-book: use the Convert an e-book to PDF module.",
+        "iwork_numbers": "This file is a Numbers spreadsheet, which conv2pdf does not convert. Open it in Numbers and choose File > Export To > PDF.",
+        "iwork_keynote": "This file is a Keynote presentation, which conv2pdf does not convert. Open it in Keynote and choose File > Export To > PDF.",
+        "iwork": "conv2pdf converts Apple Pages documents only, named with their .pages extension."
     }
 }

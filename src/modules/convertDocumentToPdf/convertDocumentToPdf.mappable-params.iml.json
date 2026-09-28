@@ -5,7 +5,7 @@
         "label": "File name",
         "required": true,
         "semantic": "file:name",
-        "help": "Name of the file, with its extension. For example, `report.docx`."
+        "help": "Name of the file, with its extension. For example, `report.docx`. A Pages document must keep its `.pages` extension: only the name tells it from a Numbers spreadsheet, which conv2pdf does not convert."
     },
     {
         "name": "data",
@@ -13,6 +13,6 @@
         "label": "Data",
         "required": true,
         "semantic": "file:data",
-        "help": "Content of the document to convert: Word, Excel, PowerPoint, OpenDocument, RTF, TXT or CSV."
+        "help": "Content of the document to convert: Word, Excel, PowerPoint, OpenDocument, Apple Pages, RTF, TXT or CSV."
     }
 ]

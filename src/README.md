@@ -1,6 +1,6 @@
 # conv2pdf
 
-[conv2pdf](https://conv2pdf.com/en/api/) converts Word, Excel, PowerPoint, images and HEIC photos to PDF, merges, compresses, numbers and secures PDFs, and converts PDFs to Word, on servers in France.
+[conv2pdf](https://conv2pdf.com/en/api/) converts Word, Excel, PowerPoint, Pages, images, HEIC photos and EPUB e-books to PDF, merges, compresses, numbers and secures PDFs, and converts PDFs to Word, on servers in France.
 
 ## Connect conv2pdf to Make
 
@@ -14,11 +14,13 @@ Make checks the key by reading its quota, which uses no conversion.
 
 Every module takes a file from a previous module, for example a file downloaded from Google Drive or received by email, and returns the result as a file for the next modules, with its size and the quota of the API key. Each module uses one conversion.
 
-- **Convert files**: Convert a document to PDF, Convert an image to PDF, Convert a HEIC photo to PDF, Convert a HEIC photo to JPG, Convert a PDF to Word, Convert a PDF to images (a ZIP file of PNG or JPG images).
+- **Convert files**: Convert a document to PDF, Convert an image to PDF, Convert a HEIC photo to PDF, Convert a HEIC photo to JPG, Convert an e-book to PDF, Convert a PDF to Word, Convert a PDF to images (a ZIP file of PNG or JPG images).
 - **Edit PDFs**: Merge PDFs, Extract pages from a PDF, Rotate a PDF, Add page numbers to a PDF, Add a watermark to a PDF, Compress a PDF.
 - **Secure PDFs**: Protect a PDF with a password, Remove a password from a PDF.
 - **Get quota** returns the plan, the conversions used and the limits of the API key.
 - **Make an API call** sends any request to the [conv2pdf API](https://conv2pdf.com/en/api/docs/) with your connection.
+
+The modules that read a PDF, except Merge PDFs, have a **PDF password** field for a PDF that asks for a password to open. The result has no password. A Pages document must keep its `.pages` name: only the name tells it from a Numbers spreadsheet, which conv2pdf does not convert, like Keynote presentations.
 
 To merge PDFs that come from several bundles, collect them with an **Array aggregator** and map the array to **PDFs**.
 

@@ -10,7 +10,8 @@
                     "filename": "{{parameters.fileName}}"
                 }
             },
-            "ranges": "{{parameters.ranges}}"
+            "ranges": "{{parameters.ranges}}",
+            "password": "{{parameters.password}}"
         },
         "response": {
             "temp": {
