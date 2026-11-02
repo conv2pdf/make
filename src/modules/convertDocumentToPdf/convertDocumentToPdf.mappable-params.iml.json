@@ -5,7 +5,7 @@
         "label": "File name",
         "required": true,
         "semantic": "file:name",
-        "help": "Name of the file, with its extension. For example, `report.docx`. A Pages document must keep its `.pages` extension: only the name tells it from a Numbers spreadsheet, which conv2pdf does not convert."
+        "help": "Name of the file, with its extension. For example, `report.docx`. A Pages document must keep its `.pages` extension: only the name tells it from a Numbers spreadsheet, which Conv2pdf does not convert."
     },
     {
         "name": "data",

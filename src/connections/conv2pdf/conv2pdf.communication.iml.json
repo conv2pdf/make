@@ -7,7 +7,7 @@
     },
     "response": {
         "error": {
-            "message": "[{{statusCode}}] {{if(body.error == 'invalid_api_key', 'The conv2pdf API key is invalid or has been revoked.', if(body.error == 'account_not_provisioned', 'This API key has no conv2pdf API plan.', 'conv2pdf rejected the API key.'))}}{{if(body.error, ' (error code: ' + body.error + ')', '')}}"
+            "message": "[{{statusCode}}] {{if(body.error == 'invalid_api_key', 'The Conv2pdf API key is invalid or has been revoked.', if(body.error == 'account_not_provisioned', 'This API key has no Conv2pdf API plan.', 'Conv2pdf rejected the API key.'))}}{{if(body.error, ' (error code: ' + body.error + ')', '')}}"
         }
     },
     "log": {

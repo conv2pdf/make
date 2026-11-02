@@ -1,5 +1,5 @@
 {
-    "label": "conv2pdf",
+    "label": "Conv2pdf",
     "description": "Converts Word, Excel, PowerPoint and images to PDF, merges, compresses and secures PDFs, and converts PDFs to Word, on servers in France.",
     "theme": "#E44A30",
     "language": "en",

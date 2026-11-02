@@ -9,7 +9,7 @@
     "components": {
         "connection": {
             "conv2pdf": {
-                "label": "conv2pdf",
+                "label": "Conv2pdf",
                 "connectionType": "basic",
                 "codeFiles": {
                     "communication": "connections/conv2pdf/conv2pdf.communication.iml.json",
@@ -277,7 +277,7 @@
             },
             "makeApiCall": {
                 "label": "Make an API call",
-                "description": "Sends a custom API call to conv2pdf. You can use this to call endpoints that aren't covered by existing modules.",
+                "description": "Sends a custom API call to Conv2pdf. You can use this to call endpoints that aren't covered by existing modules.",
                 "moduleType": "universal",
                 "actionCrud": null,
                 "connection": "conv2pdf",

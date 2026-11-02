@@ -1,10 +1,10 @@
-# conv2pdf for Make
+# Conv2pdf for Make
 
-The [Make](https://www.make.com) app of the [conv2pdf API](https://conv2pdf.com/en/api/): it converts Word, Excel, PowerPoint, Pages, images, HEIC photos and EPUB e-books to PDF, merges, compresses, numbers and secures PDFs, and converts PDFs to Word, on servers in France.
+The [Make](https://www.make.com) app of the [Conv2pdf API](https://conv2pdf.com/en/api/): it converts Word, Excel, PowerPoint, Pages, images, HEIC photos and EPUB e-books to PDF, merges, compresses, numbers and secures PDFs, and converts PDFs to Word, on servers in France.
 
 ## Modules
 
-| Group | Module | conv2pdf tool |
+| Group | Module | Conv2pdf tool |
 | --- | --- | --- |
 | Convert files | Convert a document to PDF | `office-to-pdf` |
 | | Convert an image to PDF | `image-to-pdf` |
@@ -24,17 +24,17 @@ The [Make](https://www.make.com) app of the [conv2pdf API](https://conv2pdf.com/
 | Account | Get quota | `GET /v1/quota` |
 | Other | Make an API call | any path under `https://api.conv2pdf.com` |
 
-Each file module sends the mapped file to `POST /v1/convert/{tool}` as multipart/form-data, then downloads the result from `GET /v1/download/{job_id}` in the same module and returns it as a Make file, with its size and the quota of the API key. conv2pdf deletes the files one hour after the conversion.
+Each file module sends the mapped file to `POST /v1/convert/{tool}` as multipart/form-data, then downloads the result from `GET /v1/download/{job_id}` in the same module and returns it as a Make file, with its size and the quota of the API key. Conv2pdf deletes the files one hour after the conversion.
 
-The connection asks for a conv2pdf API key, created in the Developer tab of the [conv2pdf dashboard](https://conv2pdf.com/en/dashboard/#developer), and checks it against `GET /v1/quota`, which uses no conversion. The key is sent only to `api.conv2pdf.com`.
+The connection asks for a Conv2pdf API key, created in the Developer tab of the [Conv2pdf dashboard](https://conv2pdf.com/en/dashboard/#developer), and checks it against `GET /v1/quota`, which uses no conversion. The key is sent only to `api.conv2pdf.com`.
 
 ## How it behaves
 
-- The error codes of conv2pdf decide the Make error type. A problem with the file or the options of the run (`unsupported_content`, `file_too_large`, `pdf_scanned_needs_ocr`, `conversion_failed`...) raises a `DataError`, which Make can keep as an incomplete execution. A revoked key raises `InvalidAccessTokenError`, which deactivates the scenario.
-- conv2pdf answers `429` both for a used-up quota and for the rate limit: `quota_exceeded` becomes a `RuntimeError`, since retrying cannot help, and `rate_limited` stays a `RateLimitError`, which Make retries after a pause. `5xx` answers such as `503 server_busy` are `ConnectionError`s, which Make retries.
+- The error codes of Conv2pdf decide the Make error type. A problem with the file or the options of the run (`unsupported_content`, `file_too_large`, `pdf_scanned_needs_ocr`, `conversion_failed`...) raises a `DataError`, which Make can keep as an incomplete execution. A revoked key raises `InvalidAccessTokenError`, which deactivates the scenario.
+- Conv2pdf answers `429` both for a used-up quota and for the rate limit: `quota_exceeded` becomes a `RuntimeError`, since retrying cannot help, and `rate_limited` stays a `RateLimitError`, which Make retries after a pause. `5xx` answers such as `503 server_busy` are `ConnectionError`s, which Make retries.
 - The seven modules whose tool opens a protected PDF (Convert a PDF to Word, Convert a PDF to images, Extract pages, Rotate, Add page numbers, Add a watermark, Compress) send the optional **PDF password** field as `password`; the logs hide it, like the API key.
-- The messages for each conv2pdf error code are in the common data (`src/general/common.json`), because Make caps an error message expression at 1024 characters.
-- A conversion can take up to 90 seconds on conv2pdf's side: the app raises Make's 40-second request timeout to 120 seconds, like the conv2pdf node for n8n.
+- The messages for each Conv2pdf error code are in the common data (`src/general/common.json`), because Make caps an error message expression at 1024 characters.
+- A conversion can take up to 90 seconds on Conv2pdf's side: the app raises Make's 40-second request timeout to 120 seconds, like the Conv2pdf node for n8n.
 
 ## Development
 

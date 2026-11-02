@@ -4,7 +4,7 @@
         "type": "text",
         "label": "URL",
         "required": true,
-        "help": "Enter the part of the URL that comes after `https://api.conv2pdf.com`. For example, `/v1/quota`. For the list of endpoints, see the [conv2pdf API documentation](https://conv2pdf.com/en/api/docs/)."
+        "help": "Enter the part of the URL that comes after `https://api.conv2pdf.com`. For example, `/v1/quota`. For the list of endpoints, see the [Conv2pdf API documentation](https://conv2pdf.com/en/api/docs/)."
     },
     {
         "name": "method",
